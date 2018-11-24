@@ -1,0 +1,17 @@
+<article class="link">
+
+	<section class="link-head">
+		<small>
+				<%= link_to 'Edit', edit_article_path(article) %>
+				|
+				<%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you chure ?' } %>
+		</small>
+	</section>
+	<section>
+	</section>
+
+	<section class="link-body">
+		<h4><%= link_to article.name, article_path(article) %></h4>
+		<p><%= link_to article.description, article_path(article) %></p>
+	</section>
+</article>
